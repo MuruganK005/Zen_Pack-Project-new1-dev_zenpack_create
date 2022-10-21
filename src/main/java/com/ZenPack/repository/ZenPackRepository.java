@@ -13,4 +13,6 @@ public interface ZenPackRepository extends JpaRepository<ZenPack,Integer>, JpaSp
     void deleteByZenPackId(Long zenPackId);
 
     Optional<ZenPack> findByZenPackId(Long zenPackId);
+
+    Optional<ZenPack> findByName(String name);
 }

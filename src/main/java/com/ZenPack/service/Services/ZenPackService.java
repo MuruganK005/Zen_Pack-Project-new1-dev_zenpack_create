@@ -1,6 +1,7 @@
 package com.ZenPack.service.Services;
 
 import com.ZenPack.Dto.ZenPackDto;
+import com.ZenPack.Exception.ZenPackException;
 import com.ZenPack.model.ZenPack;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +11,11 @@ import java.util.Objects;
 import java.util.Optional;
 
 public interface ZenPackService {
-    ResponseEntity<ZenPack> saveZenPack(ZenPack zenPack);
+    /*ResponseEntity<ZenPack> saveZenPack(ZenPack zenPack);*/
 
-    ResponseEntity<ZenPackDto> createZenPack(ZenPackDto zenPackDto) throws JsonProcessingException;
+    ZenPackDto createZenPack(ZenPackDto zenPackDto) throws JsonProcessingException, ZenPackException;
 
-    List<ZenPackDto> getAllZenPack() throws JsonProcessingException;
+    List<ZenPackDto> getAllZenPack() throws Exception;
 
     String deleteByzenPackId(Long zenPackId);
 

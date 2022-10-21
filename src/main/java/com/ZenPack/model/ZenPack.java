@@ -18,6 +18,7 @@ import java.util.*;
 @Entity
 @Table(name = "zen_pack")
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@Builder
 public class ZenPack {
 
     @Id
@@ -31,10 +32,10 @@ public class ZenPack {
     @Column(name = "json_data",length = 50000)
     private String jsonData;
 
-    @Column(name = "created_date")
+    @Column(name = "updated_time")
     private Date updatedTime= new Date();
 
-    @Column(name = "updated_time")
+    @Column(name = "created_date")
     private Date createdDate =new Date();
 
     @Column(name = "created_by")

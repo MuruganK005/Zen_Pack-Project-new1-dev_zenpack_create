@@ -1,10 +1,11 @@
 package com.ZenPack.Dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class FeatureDto {
 
     private Integer id;
